@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // Load routes
-const ideas = require('./routes/ideas');
+const tasks = require('./routes/tasks');
 const users = require('./routes/users');
 
 // Passport Config
@@ -84,7 +84,7 @@ app.get('/about', (req, res) => {
 });
 
 // Use routes
-app.use('/ideas', ideas);
+app.use('/tasks', tasks);
 app.use('/users', users);
 
 const port = process.env.PORT || 5000;
